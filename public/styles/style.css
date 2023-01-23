@@ -5,17 +5,20 @@ html {
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: #fff2f4;
+    background-color: #F1EFE4;
     font-size: 16px;
     font-family: Roboto, sans-serif;
     height: 100vh;
     overflow: auto;
 }
 
-body > * {
+body * {
     box-sizing: inherit;
 }
 
+/*****
+HEADER
+*****/
 header {
     display: flex;
     flex-flow: nowrap column;
@@ -38,15 +41,14 @@ header section:after {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #11111111, #11111133, #111111);
+    background: linear-gradient(to bottom, #0A110B11, #0A110B33, #0A110B);
 }
 
 header section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 0%;
-    filter: brightness(90%);
+    object-position: 50% 50%;
 }
 
 header nav {
@@ -76,8 +78,8 @@ header nav ul li a {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #111;
-    color: #fff;
+    background-color: #0A110B;
+    color: #F1EFE4;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -87,32 +89,56 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a:active {
-    background-color: #222;
+    background-color: #172719;
+    color: #FFFFFF;
 }
 
-main { 
-    overflow: auto;
+header nav ul li a svg {
+    width: auto;
+    height: 2rem;
 }
 
+header nav ul li a span {
+    margin-left: 1rem;
+}
+
+/***********
+MAIN CONTENT
+***********/
 main > section {
-    min-height: 90vh;
+    min-height: 100vh;
     text-align: center;
+    padding: 2rem 5rem;
 }
 
 main section h2 {
-    scroll-snap-align: start;
+    text-transform: uppercase;
+    font-family: monospace;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    margin: 0;
 }
 
-main section#location iframe {
+main section#program {
+    background-color: #686D5F;
+    color: #F1EFE4;
+}
+
+main section#location {
     display: block;
-    height: 100vh;
+    height: 95vh;
+    min-height: 95vh;
+    padding: 0;
 }
 
+/*****
+FOOTER
+*****/
 footer {
     display: block;
     height: 5vh;
-    background-color: #111;
-    color: #fff;
+    background-color: #0A110B;
+    color: #F1EFE4;
 }
 
 footer .back-to-top {
@@ -123,13 +149,9 @@ footer .back-to-top {
     bottom: 4.5rem;
     right: 4.5rem;
     z-index: 1;
-    background-color: #111;
-    border-radius: 0.25rem;
+    background-color: #0A110B;
+    border-radius: 0.5rem;
     opacity: 0.75;
-}
-
-footer .back-to-top img {
-    object-fit: cover;
 }
 
 footer .back-to-top:hover,
@@ -143,6 +165,12 @@ footer .back-to-top a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #F1EFE4;
+}
+
+footer .back-to-top a svg {
+    width: 60%;
+    margin-top: 1.25rem;
 }
 
 footer p {
@@ -150,3 +178,40 @@ footer p {
     text-align: center;
     line-height: 5vh;
 }
+
+@media only screen and (max-width: 768px) {
+    header nav ul li a {
+        font-size: 0.75rem;
+    }
+
+    footer .back-to-top {
+        width: 4rem;
+        bottom: 3rem;
+        right: 3rem;
+    }
+
+    footer .back-to-top a svg {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .desktop-only {
+        display: none;
+    }
+
+    header nav ul li a svg {
+        height: 1.5rem;
+    }
+
+    footer .back-to-top {
+        width: 3rem;
+        bottom: 2.5rem;
+        right: 2rem;
+    }
+
+    footer .back-to-top a svg {
+        margin-top: 0.75rem;
+    }
+}
+  

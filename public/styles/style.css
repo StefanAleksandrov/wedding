@@ -44,6 +44,18 @@ header section:after {
     background: linear-gradient(to bottom, #0A110B11, #0A110B33, #0A110B);
 }
 
+header section date {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 0 0 1rem black;
+    mix-blend-mode: overlay;
+}
+
 header section img {
     width: 100%;
     height: 100%;
@@ -185,12 +197,12 @@ footer {
 }
 
 footer .back-to-top {
-    width: 5rem;
+    width: 4rem;
     aspect-ratio: 1;
     overflow: hidden;
     position: fixed;
-    bottom: 4.5rem;
-    right: 4.5rem;
+    bottom: 4.25rem;
+    right: 4rem;
     z-index: 1;
     background-color: #0A110B;
     border-radius: 0.5rem;
@@ -213,7 +225,7 @@ footer .back-to-top a {
 
 footer .back-to-top a svg {
     width: 60%;
-    margin-top: 1.25rem;
+    margin-top: 1.1rem;
 }
 
 footer p {
@@ -223,6 +235,10 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
+    header section date {
+        font-size: 4rem;
+    }
+
     header nav ul li a {
         font-size: 0.75rem;
     }
@@ -239,6 +255,10 @@ footer p {
 }
 
 @media only screen and (max-width: 568px) {
+    header section date {
+        font-size: 3rem;
+    }
+
     .desktop-only {
         display: none;
     }

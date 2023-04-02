@@ -1,11 +1,20 @@
 html {
     scroll-behavior: smooth !important;
+
+    --green: #011910;
+    --dark-green: #011405;
+    --green-transparent: #01191002;
+    --white: #FFF;
+    --white-transparent: #FFFFFF99;
+    --off-white: #F1EFE4;
+    --black: #000;
+    --sloped-elements-height: 75px;
 }
 
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: #F1EFE4;
+    background-color: var(--off-white);
     font-size: 16px;
     font-family: Roboto, sans-serif;
     height: 100vh;
@@ -41,18 +50,18 @@ header section:after {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #0A110B11, #0A110B33, #0A110B);
+    background: linear-gradient(to bottom, var(--green-transparent), var(--green-transparent), var(--green));
 }
 
 header section date {
     width: 100%;
     margin: 0;
     position: absolute;
-    color: #fff;
+    color: var(--white);
     font-size: 5rem;
     text-align: center;
     font-weight: 900;
-    text-shadow: 0 0 1rem black;
+    text-shadow: 0 0 1rem var(--black);
     mix-blend-mode: overlay;
 }
 
@@ -60,7 +69,7 @@ header section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: 50% 90%;
 }
 
 header nav {
@@ -77,6 +86,7 @@ header nav ul {
     height: 100%;
     margin: 0;
     padding: 0;
+    border-top: 3px solid var(--dark-green);
 }
 
 header nav ul li {
@@ -90,8 +100,8 @@ header nav ul li a {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #0A110B;
-    color: #F1EFE4;
+    background-color: var(--green);
+    color: var(--off-white);
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -101,8 +111,8 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a:active {
-    background-color: #172719;
-    color: #FFFFFF;
+    background-color: var(--dark-green);
+    color: var(--white);
 }
 
 header nav ul li a svg {
@@ -123,31 +133,91 @@ main > section {
     padding: 3rem 5rem;
 }
 
-main section h2 {
+main > section > h2 {
     text-transform: uppercase;
     font-family: monospace;
+    font-size: 36px;
     letter-spacing: 0.15rem;
     font-weight: 900;
     margin: 0;
 }
 
-main section#information ul {
+main > section#invitation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 24px;
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+main > section#invitation :is(p, h2) {
+    margin: 0;
+    line-height: 1.5;
+}
+
+main > section#invitation .date {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+main > section#invitation .date span {
+    font-size: 32px;
+    text-decoration: overline underline;
+    padding-inline: 1ch;
+}
+
+main > section#information {
+    background-color: var(--green);
+    color: var(--off-white);
+    position: relative;
+}
+
+main > section#information::before,
+main > section#information::after {
+    content: '';
+    display: block;
+    background-color: var(--green);
+    max-width: 100vw;
+    height: var(--sloped-elements-height);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+main > section#information::before {
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    top: calc(var(--sloped-elements-height) * -1);
+}
+
+
+main > section#information::after {
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    bottom: calc(var(--sloped-elements-height) * -1);
+}
+
+
+main > section#information ul {
     list-style: none;
     margin: 3rem 0 0;
     padding: 0;
 }
 
-main section#information ul li {
+main > section#information ul li {
     margin: 3rem 0;
     padding: 0;
 }
 
-main section#information ul li p,
-main section#information ul li h4 {
+main > section#information ul li :is(p, h4) {
     margin: 0.75rem 0;
 }
 
-main section#information ul li .groomsman {
+main > section#information ul li .groomsman {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -157,7 +227,7 @@ main section#information ul li .groomsman {
     margin: 0 auto;
 }
 
-main section#information ul li .groomsman ul {
+main > section#information ul li .groomsman ul {
     width: max-content;
     margin: 0;
     padding: 0;
@@ -165,25 +235,51 @@ main section#information ul li .groomsman ul {
     line-height: 1;
 }
 
-main section#information ul li .groomsman ul:first-of-type {
+main > section#information ul li .groomsman ul:first-of-type {
     text-align: end;
 }
 
-main section#information ul li .groomsman ul li {
+main > section#information ul li .groomsman ul li {
     margin: 0;
     padding: 0;
 }
 
-main section#program {
-    background-color: #686D5F;
-    color: #F1EFE4;
+main > section#program {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7.5rem;
 }
 
-main section#location {
-    display: block;
+main > section#program article {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+main > section#program article .card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+main > section#program article .card svg {
+    height: 5rem;
+    margin-bottom: 3rem;
+    fill: var(--green);
+}
+
+main > section#location {
+    display: flex;
+    gap: 1rem;
     height: 95vh;
-    min-height: 95vh;
     padding: 0;
+}
+
+main > section#location iframe {
+    aspect-ratio: 1;
+    min-width: 250px;
 }
 
 /*****
@@ -192,8 +288,8 @@ FOOTER
 footer {
     display: block;
     height: 5vh;
-    background-color: #0A110B;
-    color: #F1EFE4;
+    background-color: var(--green);
+    color: var(--off-white);
 }
 
 footer .back-to-top {
@@ -204,14 +300,16 @@ footer .back-to-top {
     bottom: 4.25rem;
     right: 4rem;
     z-index: 1;
-    background-color: #0A110B;
+    background-color: var(--green);
+    outline: 1px solid var(--white-transparent);
+    color: var(--off-white);
     border-radius: 0.5rem;
-    opacity: 0.75;
 }
 
 footer .back-to-top:hover,
 footer .back-to-top:active {
-    opacity: 1;
+    background-color: var(--dark-green);
+    color: var(--white);
 }
 
 footer .back-to-top a {
@@ -220,7 +318,7 @@ footer .back-to-top a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F1EFE4;
+    color: var(--off-white);
 }
 
 footer .back-to-top a svg {

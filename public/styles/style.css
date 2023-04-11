@@ -384,10 +384,6 @@ footer p {
         height: 1.5rem;
     }
 
-    main > section {
-        min-height: -webkit-fill-available;
-    }
-
     main > section > h2 {
         font-size: 28px;
     }

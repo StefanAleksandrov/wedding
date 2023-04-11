@@ -63,6 +63,7 @@ header section date {
     font-weight: 900;
     text-shadow: 0 0 1rem var(--black);
     mix-blend-mode: overlay;
+    white-space: nowrap;
 }
 
 header section img {
@@ -144,7 +145,6 @@ main > section > h2 {
 }
 
 main > section#invitation {
-    min-height: 97.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,14 +194,14 @@ main > section#information::after {
 main > section#information::before {
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    top: calc(var(--sloped-elements-height) * -1);
+    top: calc(var(--sloped-elements-height) * -1 + 1px);
 }
 
 
 main > section#information::after {
     -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
     clip-path: polygon(100% 0, 0 0, 100% 100%);
-    bottom: calc(var(--sloped-elements-height) * -1);
+    bottom: calc(var(--sloped-elements-height) * -1 + 1px);
 }
 
 
@@ -245,6 +245,7 @@ main > section#information ul li .groomsman ul:first-of-type {
 main > section#information ul li .groomsman ul li {
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 main > section#program {
@@ -257,14 +258,16 @@ main > section#program {
 
 main > section#program article {
     display: flex;
-    flex-wrap: wrap;
     gap: 4rem;
     align-items: stretch;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    max-width: 100vw;
+    padding: 32px;
 }
 
 main > section#program article .card {
-    flex: 1 0 120px;
+    flex: 1 0 240px;
     border-radius: 1rem;
     box-shadow: 0 0 30px 1px var(--green);
     padding: 1rem;
@@ -374,7 +377,7 @@ footer p {
     }
 
     header section date {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     header nav ul li a svg {
@@ -385,6 +388,10 @@ footer p {
         min-height: -webkit-fill-available;
     }
 
+    main > section > h2 {
+        font-size: 28px;
+    }
+
     main > section#invitation .date {
         font-size: 32px;
     }
@@ -392,6 +399,14 @@ footer p {
     main > section#invitation .date span {
         font-size: 26px;
         padding-inline: 0.25ch;
+    }
+
+    main > section#information ul li {
+        margin: 1.5rem;
+    }
+
+    main > section#information ul li .groomsman {
+        gap: 16px;
     }
 
     footer .back-to-top {

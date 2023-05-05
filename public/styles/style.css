@@ -179,6 +179,7 @@ main > section#invitation a {
     padding: 1rem 3rem;
     text-decoration: none;
     border-radius: 0.5rem;
+    white-space: nowrap;
 }
 
 main > section#information {
@@ -403,10 +404,14 @@ footer p {
     main > section#invitation .date {
         font-size: 32px;
     }
-    
+
     main > section#invitation .date span {
         font-size: 26px;
         padding-inline: 0.25ch;
+    }
+
+    main > section#invitation a {
+        font-size: 20px;
     }
 
     main > section#information ul li {

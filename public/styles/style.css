@@ -300,6 +300,7 @@ main > section#program article .card p {
 }
 
 main > section#location {
+    min-height: fit-content;
     padding: 1rem;
 }
 

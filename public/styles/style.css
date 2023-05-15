@@ -309,7 +309,6 @@ main > section#location h2 {
 
 main > section#location iframe {
     aspect-ratio: 16 / 9;
-    flex: 1 0 300px;
 }
 
 /*****
@@ -374,6 +373,10 @@ footer p {
 
     main > section {
         padding: 1rem 2rem;
+    }
+
+    main > section#location iframe {
+        aspect-ratio: 1;
     }
 
     footer .back-to-top {

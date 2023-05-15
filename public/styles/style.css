@@ -376,6 +376,10 @@ footer p {
         padding: 1rem 2rem;
     }
 
+    main > section#program article .card {
+        box-shadow: 0 0 20px 1px var(--green);
+    }
+
     main > section#location iframe {
         aspect-ratio: 1;
     }

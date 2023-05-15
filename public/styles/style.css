@@ -1,9 +1,9 @@
 html {
     scroll-behavior: smooth !important;
 
-    --green: #011910;
-    --dark-green: #011508;
-    --green-transparent: #01191002;
+    --green: #073f34;
+    --dark-green: #063a34;
+    --green-transparent: #073f3402;
     --white: #FFF;
     --white-transparent: #FFFFFF99;
     --off-white: #F1EFE4;
@@ -182,13 +182,15 @@ main > section#invitation a {
     white-space: nowrap;
 }
 
-main > section#information {
+main > section#information,
+main > section#location {
     background-color: var(--green);
     color: var(--white);
     position: relative;
 }
 
 main > section#information::before,
+main > section#location::before,
 main > section#information::after {
     content: '';
     display: block;
@@ -201,7 +203,8 @@ main > section#information::after {
 }
 
 
-main > section#information::before {
+main > section#information::before,
+main > section#location::before {
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     top: calc(var(--sloped-elements-height) * -1 + 1px);
@@ -289,7 +292,6 @@ main > section#program article .card {
 main > section#program article .card svg {
     height: 5rem;
     margin-block: 3rem;
-    fill: var(--green);
 }
 
 main > section#program article .card p {
@@ -298,14 +300,15 @@ main > section#program article .card p {
 }
 
 main > section#location {
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
-    padding: 0 1rem 2rem;
+    padding: 1rem;
+}
+
+main > section#location h2 {
+    margin-bottom: 2rem;
 }
 
 main > section#location iframe {
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
     flex: 1 0 300px;
 }
 

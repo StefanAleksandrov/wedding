@@ -365,7 +365,7 @@ footer p {
 
 @media only screen and (max-width: 768px) {
     html {
-        --sloped-elements-height: 50px;
+        --sloped-elements-height: 45px;
     }
 
     header section date {
@@ -400,10 +400,6 @@ footer p {
 }
 
 @media only screen and (max-width: 568px) {
-    html {
-        --sloped-elements-height: 30px;
-    }
-
     .desktop-only {
         display: none;
     }

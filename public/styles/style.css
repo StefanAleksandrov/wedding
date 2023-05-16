@@ -229,7 +229,7 @@ main > section#information ul li {
     padding: 0;
 }
 
-main > section#information ul li :is(p, h4) {
+main > section#information ul li :is(p, h3) {
     margin: 0.75rem 0;
 }
 

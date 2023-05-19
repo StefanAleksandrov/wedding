@@ -2,12 +2,15 @@ html {
     scroll-behavior: smooth !important;
 
     --green: #073f34;
+    --light-green: #14977d;
     --dark-green: #063a34;
     --green-transparent: #073f3402;
+    --green-transparent-two: #073f3455;
     --white: #FFF;
     --white-transparent: #FFFFFF99;
     --off-white: #F1EFE4;
     --black: #000;
+    --gray: #555;
     --sloped-elements-height: 75px;
 }
 
@@ -135,7 +138,8 @@ main > section {
     padding: 3rem 5rem;
 }
 
-main > section > h2 {
+main > section > h2,
+main > section > div > h2 {
     text-transform: uppercase;
     font-family: monospace;
     font-size: 36px;
@@ -267,6 +271,57 @@ main > section#program {
     align-items: center;
     justify-content: center;
     gap: 7.5rem;
+    position: relative;
+}
+
+main > section#program .timer {
+    min-width: max-content;
+    margin: 28px 0 0;
+    padding: 12px 40px 36px;
+    border-radius: 8px;
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(to top, var(--green), var(--light-green));
+    color: var(--white);
+}
+
+main > section#program .timer .days,
+main > section#program .timer .hours,
+main > section#program .timer .minutes,
+main > section#program .timer .seconds {
+    position: relative;
+}
+
+main > section#program .timer .days::after,
+main > section#program .timer .hours::after,
+main > section#program .timer .minutes::after,
+main > section#program .timer .seconds::after {
+    content: 'Дни';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    transform: translateY(125%);
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-style: italic;
+    color: var(--white-transparent);
+}
+
+main > section#program .timer .hours::after {
+    content: 'Ч.';
+}
+
+main > section#program .timer .minutes::after {
+    content: 'Мин.';
+}
+
+main > section#program .timer .seconds::after {
+    content: 'Сек.';
 }
 
 main > section#program article {
@@ -435,6 +490,17 @@ footer p {
 
     main > section#information ul li .groomsman {
         gap: 16px;
+    }
+
+    main > section#program .timer {
+        font-size: 30px;
+    }
+
+    main > section#program .timer .days::after,
+    main > section#program .timer .hours::after,
+    main > section#program .timer .minutes::after,
+    main > section#program .timer .seconds::after {
+        font-size: 12px;
     }
 
     footer .back-to-top {

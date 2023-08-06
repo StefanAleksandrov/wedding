@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                         </svg>
-                        <span class="desktop-only">Покана</span>
+                        <span class="desktop-only">Благодарности</span>
                     </a>
                 </li>
                 <li>
@@ -49,11 +49,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#location" aria-label="Location">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/>
+                    <a href="#pictures" aria-label="Location">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/>
                         </svg>
-                        <span class="desktop-only">Локация</span>
+                        <span class="desktop-only">Снимки</span>
                     </a>
                 </li>
             </ul>
@@ -61,14 +61,17 @@
     </header>
     <main>
         <section id="invitation">
-            <h2>Покана</h2>
-            <p>С огромно удоволствие Ви каним да бъдете гости на нашето сватбено тържество!</p>
+            <h2>Благодарности</h2>
+            <p>Благодарим Ви, че бяхте гости и присъствахте на нашето сватбено тържество!</p>
             <p class="date">
                 <span>Събота</span> 08 <span>Юли 2023</span>
             </p>
             <p>гр. Пловдив</p>
-            <p>Моля потвърдете присъствие до 1-ви Юни (01.06.2023г.) на имейл tsef7n2@abv.bg</p>
-            <a href="mailto:tsef7n2@abv.bg?subject=Потвърждение за присъствие, Сватба 08 Юли" aria-label="Confirm">Потвърди</a>
+            <p>
+                С вашето присъствие и добро настроение, сватбата ни се превърна в незабравим празник!
+                <br />
+                Особени благодарности на всички, които се присъединиха към нас още от 06/07 Юли и направиха празника ни 3 дневен!
+            </p>
         </section>
         <section id="information">
             <h2>Информация</h2>
@@ -190,17 +193,16 @@
                 </a>
             </article>
         </section>
-        <section id="location">
-            <h2>A&M Хотел</h2>
-            <iframe
-                title="A&M Hotel, Plovdiv"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1592.050796135455!2d24.740609274845703!3d42.13410649303134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1ae8023a043%3A0x4254a2f1c8074225!2zQSbQnCDQpdC-0YLQtdC7!5e1!3m2!1sbg!2sbg!4v1684231047958!5m2!1sbg!2sbg"
-                width="100%"
-                style="border:0;"
-                loading="lazy"
-                fullscreen=""
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+        <section id="pictures">
+            <section class="carousel">
+                <img src="public/images/wedding/02.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/05.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/04.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/03.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/06.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/07.jpg" alt="Wedding Photos" />
+                <img src="public/images/wedding/01.jpg" alt="Wedding Photos" />
+            </section>
         </section>
     </main>
     <footer>

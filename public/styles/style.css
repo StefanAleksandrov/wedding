@@ -187,14 +187,14 @@ main > section#invitation a {
 }
 
 main > section#information,
-main > section#location {
+main > section#pictures {
     background-color: var(--green);
     color: var(--white);
     position: relative;
 }
 
 main > section#information::before,
-main > section#location::before,
+main > section#pictures::before,
 main > section#information::after {
     content: '';
     display: block;
@@ -208,7 +208,7 @@ main > section#information::after {
 
 
 main > section#information::before,
-main > section#location::before {
+main > section#pictures::before {
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     top: calc(var(--sloped-elements-height) * -1 + 1px);
@@ -354,17 +354,41 @@ main > section#program article .card p {
     line-height: 1.5;
 }
 
-main > section#location {
+main > section#pictures {
     min-height: fit-content;
     padding: 1rem;
+    overflow: hidden;
 }
 
-main > section#location h2 {
+main > section#pictures h2 {
     margin-bottom: 2rem;
 }
 
-main > section#location iframe {
-    aspect-ratio: 16 / 9;
+main > section#pictures .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 97svh;
+    margin: auto;
+    overflow: hidden;
+}
+
+@keyframes carousel-autoplay {
+    100% {
+        transform: translateX(-600%);
+    }
+}
+
+main > section#pictures * img {
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    animation-name: carousel-autoplay;
+    animation-direction: alternate;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-right: 10px;
 }
 
 /*****
@@ -439,7 +463,7 @@ footer p {
         box-shadow: 0 0 20px 1px var(--green);
     }
 
-    main > section#location iframe {
+    main > section#pictures iframe {
         aspect-ratio: 1;
     }
 

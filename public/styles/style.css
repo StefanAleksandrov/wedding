@@ -379,7 +379,7 @@ main > section#pictures .carousel {
     }
 }
 
-main > section#pictures * img {
+main > section#pictures .carousel img {
     min-width: 100%;
     max-width: 100%;
     object-fit: contain;
@@ -463,8 +463,8 @@ footer p {
         box-shadow: 0 0 20px 1px var(--green);
     }
 
-    main > section#pictures iframe {
-        aspect-ratio: 1;
+    main > section#pictures .carousel {
+        height: 67svh;
     }
 
     footer .back-to-top {

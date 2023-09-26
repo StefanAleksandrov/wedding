@@ -482,9 +482,14 @@ footer p {
         display: none;
     }
 
+    header section {
+        height: 75vh;
+    }
+
     header section video {
         width: auto;
         height: 100%;
+        transform: translateX(-50%);
     }
 
     header section date {

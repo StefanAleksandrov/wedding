@@ -57,6 +57,11 @@ header section:after {
     background: linear-gradient(to bottom, var(--green-transparent), var(--green-transparent), var(--green));
 }
 
+header section video {
+    width: 100%;
+    height: auto;
+}
+
 header section date {
     width: 100%;
     margin: 0;
@@ -475,6 +480,11 @@ footer p {
 @media only screen and (max-width: 568px) {
     .desktop-only {
         display: none;
+    }
+
+    header section video {
+        width: auto;
+        height: 100%;
     }
 
     header section date {
